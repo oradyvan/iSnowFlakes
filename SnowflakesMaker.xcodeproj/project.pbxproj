@@ -18,7 +18,18 @@
 		6E5614F916940F3500970AC1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5614F816940F3500970AC1 /* Default-568h@2x.png */; };
 		6E5614FC16940F3500970AC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5614FB16940F3500970AC1 /* ViewController.m */; };
 		6E5614FF16940F3500970AC1 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5614FD16940F3500970AC1 /* ViewController_iPhone.xib */; };
+		6EA597271FB1BB76003F0BBB /* SnowflakesMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA597261FB1BB76003F0BBB /* SnowflakesMakerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EA597291FB1BB76003F0BBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E5614D516940F3500970AC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E5614DD16940F3500970AC1;
+			remoteInfo = SnowflakesMaker;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6E5614DE16940F3500970AC1 /* SnowflakesMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowflakesMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +48,9 @@
 		6E5614FA16940F3500970AC1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6E5614FB16940F3500970AC1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6E5614FE16940F3500970AC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		6EA597241FB1BB76003F0BBB /* SnowflakesMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnowflakesMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EA597261FB1BB76003F0BBB /* SnowflakesMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowflakesMakerTests.swift; sourceTree = "<group>"; };
+		6EA597281FB1BB76003F0BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EA597211FB1BB76003F0BBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				6E5614E816940F3500970AC1 /* SnowflakesMaker */,
+				6EA597251FB1BB76003F0BBB /* SnowflakesMakerTests */,
 				6E5614E116940F3500970AC1 /* Frameworks */,
 				6E5614DF16940F3500970AC1 /* Products */,
 			);
@@ -66,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				6E5614DE16940F3500970AC1 /* SnowflakesMaker.app */,
+				6EA597241FB1BB76003F0BBB /* SnowflakesMakerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +130,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6EA597251FB1BB76003F0BBB /* SnowflakesMakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EA597261FB1BB76003F0BBB /* SnowflakesMakerTests.swift */,
+				6EA597281FB1BB76003F0BBB /* Info.plist */,
+			);
+			path = SnowflakesMakerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,18 +159,42 @@
 			productReference = 6E5614DE16940F3500970AC1 /* SnowflakesMaker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6EA597231FB1BB76003F0BBB /* SnowflakesMakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EA5972D1FB1BB76003F0BBB /* Build configuration list for PBXNativeTarget "SnowflakesMakerTests" */;
+			buildPhases = (
+				6EA597201FB1BB76003F0BBB /* Sources */,
+				6EA597211FB1BB76003F0BBB /* Frameworks */,
+				6EA597221FB1BB76003F0BBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EA5972A1FB1BB76003F0BBB /* PBXTargetDependency */,
+			);
+			name = SnowflakesMakerTests;
+			productName = SnowflakesMakerTests;
+			productReference = 6EA597241FB1BB76003F0BBB /* SnowflakesMakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		6E5614D516940F3500970AC1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Oleksiy Radyvanyuk";
 				TargetAttributes = {
 					6E5614DD16940F3500970AC1 = {
 						DevelopmentTeam = XHVKX3557K;
 						ProvisioningStyle = Automatic;
+					};
+					6EA597231FB1BB76003F0BBB = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6E5614DD16940F3500970AC1;
 					};
 				};
 			};
@@ -155,6 +211,7 @@
 			projectRoot = "";
 			targets = (
 				6E5614DD16940F3500970AC1 /* SnowflakesMaker */,
+				6EA597231FB1BB76003F0BBB /* SnowflakesMakerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -172,6 +229,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EA597221FB1BB76003F0BBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -185,7 +249,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EA597201FB1BB76003F0BBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA597271FB1BB76003F0BBB /* SnowflakesMakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EA5972A1FB1BB76003F0BBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E5614DD16940F3500970AC1 /* SnowflakesMaker */;
+			targetProxy = 6EA597291FB1BB76003F0BBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6E5614EB16940F3500970AC1 /* InfoPlist.strings */ = {
@@ -328,6 +408,71 @@
 			};
 			name = Release;
 		};
+		6EA5972B1FB1BB76003F0BBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SnowflakesMakerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.ngti.test.SnowflakesMakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnowflakesMaker.app/SnowflakesMaker";
+			};
+			name = Debug;
+		};
+		6EA5972C1FB1BB76003F0BBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SnowflakesMakerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.ngti.test.SnowflakesMakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnowflakesMaker.app/SnowflakesMaker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +490,15 @@
 			buildConfigurations = (
 				6E56150616940F3500970AC1 /* Debug */,
 				6E56150716940F3500970AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EA5972D1FB1BB76003F0BBB /* Build configuration list for PBXNativeTarget "SnowflakesMakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EA5972B1FB1BB76003F0BBB /* Debug */,
+				6EA5972C1FB1BB76003F0BBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

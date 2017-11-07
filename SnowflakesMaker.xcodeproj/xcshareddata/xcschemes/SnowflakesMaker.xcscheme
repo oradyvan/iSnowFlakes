@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6EA597231FB1BB76003F0BBB"
+               BuildableName = "SnowflakesMakerTests.xctest"
+               BlueprintName = "SnowflakesMakerTests"
+               ReferencedContainer = "container:SnowflakesMaker.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
