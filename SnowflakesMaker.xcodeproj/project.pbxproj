@@ -54,6 +54,7 @@
 		6EA597281FB1BB76003F0BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA597631FB1C99A003F0BBB /* SnowflakesMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowflakesMaker.h; sourceTree = "<group>"; };
 		6EA597641FB1C99A003F0BBB /* SnowflakesMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowflakesMaker.m; sourceTree = "<group>"; };
+		6EA597661FB1D5C4003F0BBB /* SnowflakesMaker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnowflakesMaker-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +132,7 @@
 				6E5614F416940F3500970AC1 /* Default.png */,
 				6E5614F616940F3500970AC1 /* Default@2x.png */,
 				6E5614F816940F3500970AC1 /* Default-568h@2x.png */,
+				6EA597661FB1D5C4003F0BBB /* SnowflakesMaker-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -337,6 +339,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SnowflakesMaker/SnowflakesMaker-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -377,6 +380,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SnowflakesMaker/SnowflakesMaker-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
