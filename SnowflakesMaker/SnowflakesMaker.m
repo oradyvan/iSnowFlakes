@@ -30,7 +30,7 @@ CGFloat const kMaxRectSizeRatio = 0.5f;
 
 - (UIImage *)createSnowflake {
     // creating image for the quarter size of the image view
-    CGFloat scale = UIScreen.mainScreen.scale;
+    CGFloat scale = self.screenScale;
     CGSize size = self.size;
     size.width = scale * roundf(size.width / 2);
     size.height = scale * roundf(size.height / 2);
