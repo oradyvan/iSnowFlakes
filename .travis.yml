@@ -1,4 +1,4 @@
 language: objective-c
 os: osx
 osx_image: xcode9.1
-script: xcodebuild -sdk iphonesimulator11.1 -project SnowflakesMaker.xcodeproj -scheme SnowflakesMaker CODE_SIGNING_REQUIRED=NO clean build test
+script: xcodebuild -sdk iphonesimulator11.1 -project SnowflakesMaker.xcodeproj -scheme SnowflakesMaker -destination "platform=iOS Simulator,name=iPhone 6" CODE_SIGNING_REQUIRED=NO clean build test
