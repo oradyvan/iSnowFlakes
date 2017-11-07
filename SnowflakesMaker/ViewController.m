@@ -12,7 +12,7 @@
 NSInteger const kNumberOfSnowflakes = 128;
 CGFloat const kMinSnowflakeRatio = 0.05f;
 CGFloat const kMaxSnowflakeRatio = 0.1f;
-NSTimeInterval const kTimerRate = 0.1;
+NSTimeInterval const kTimerRate = 0.05;
 CGFloat const kFallSpeed = 5.0f;
 NSInteger const kMinPhases = 1;
 NSInteger const kMaxPhases = 3;
@@ -55,7 +55,8 @@ NSInteger const kMaxPhases = 3;
         CGRect frame = snowflake.frame;
         frame.origin.y += fallSpeed;
         CGFloat x = frame.origin.y / self.view.frame.size.height * snowflake.tag * M_PI;
-        frame.origin.x += kFallSpeed * sinf(x) * cosf(x);
+
+        frame.origin.x += fallSpeed * sinf(x / 2) * cosf(5 * x / 6);
         snowflake.frame = frame;
 
         // if the snowflake falls off the screen, mark it for removal
@@ -71,7 +72,7 @@ NSInteger const kMaxPhases = 3;
     // add new snowflake
     if ([snowflakes count] < kNumberOfSnowflakes) {
         CGFloat flakeSize = self.view.frame.size.width * (kMinSnowflakeRatio + (CGFloat)random() / RAND_MAX * (kMaxSnowflakeRatio - kMinSnowflakeRatio));
-        CGFloat minX = 0.0f;
+        CGFloat minX = - flakeSize;
         CGFloat maxX = self.view.frame.size.width - flakeSize / 2;
         CGFloat flakeX = minX + (CGFloat)random() / RAND_MAX * (maxX - minX);
         CGRect flakeFrame = CGRectIntegral(CGRectMake(flakeX, -flakeSize, flakeSize, flakeSize));
