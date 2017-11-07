@@ -195,7 +195,7 @@
 				ORGANIZATIONNAME = "Oleksiy Radyvanyuk";
 				TargetAttributes = {
 					6E5614DD16940F3500970AC1 = {
-						DevelopmentTeam = XHVKX3557K;
+						DevelopmentTeam = B8W6H8V2S6;
 						ProvisioningStyle = Automatic;
 					};
 					6EA597231FB1BB76003F0BBB = {
@@ -390,12 +390,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XHVKX3557K;
+				DEVELOPMENT_TEAM = B8W6H8V2S6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SnowflakesMaker/SnowflakesMaker-Prefix.pch";
 				INFOPLIST_FILE = "SnowflakesMaker/SnowflakesMaker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.SnowflakesMaker;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.ngti.hkth-autumn.SnowflakesMaker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -406,12 +406,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XHVKX3557K;
+				DEVELOPMENT_TEAM = B8W6H8V2S6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SnowflakesMaker/SnowflakesMaker-Prefix.pch";
 				INFOPLIST_FILE = "SnowflakesMaker/SnowflakesMaker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.SnowflakesMaker;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.ngti.hkth-autumn.SnowflakesMaker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
