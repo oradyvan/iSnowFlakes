@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E3C2F311FB1EE1C00C67E88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3C2F301FB1EE1C00C67E88 /* Images.xcassets */; };
 		6E5614E316940F3500970AC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5614E216940F3500970AC1 /* UIKit.framework */; };
 		6E5614E516940F3500970AC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5614E416940F3500970AC1 /* Foundation.framework */; };
 		6E5614E716940F3500970AC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5614E616940F3500970AC1 /* CoreGraphics.framework */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E3C2F301FB1EE1C00C67E88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6E5614DE16940F3500970AC1 /* SnowflakesMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowflakesMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5614E216940F3500970AC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6E5614E416940F3500970AC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 				6E5614FD16940F3500970AC1 /* ViewController_iPhone.xib */,
 				6EA597631FB1C99A003F0BBB /* SnowflakesMaker.h */,
 				6EA597641FB1C99A003F0BBB /* SnowflakesMaker.m */,
+				6E3C2F301FB1EE1C00C67E88 /* Images.xcassets */,
 				6E5614E916940F3500970AC1 /* Supporting Files */,
 			);
 			path = SnowflakesMaker;
@@ -231,6 +234,7 @@
 				6E5614ED16940F3500970AC1 /* InfoPlist.strings in Resources */,
 				6E5614F516940F3500970AC1 /* Default.png in Resources */,
 				6E5614F716940F3500970AC1 /* Default@2x.png in Resources */,
+				6E3C2F311FB1EE1C00C67E88 /* Images.xcassets in Resources */,
 				6E5614F916940F3500970AC1 /* Default-568h@2x.png in Resources */,
 				6E5614FF16940F3500970AC1 /* ViewController_iPhone.xib in Resources */,
 			);
@@ -389,6 +393,7 @@
 		6E56150616940F3500970AC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = B8W6H8V2S6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -405,6 +410,7 @@
 		6E56150716940F3500970AC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = B8W6H8V2S6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
