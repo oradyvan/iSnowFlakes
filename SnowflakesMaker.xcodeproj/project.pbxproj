@@ -19,6 +19,7 @@
 		6E5614FC16940F3500970AC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5614FB16940F3500970AC1 /* ViewController.m */; };
 		6E5614FF16940F3500970AC1 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5614FD16940F3500970AC1 /* ViewController_iPhone.xib */; };
 		6EA597271FB1BB76003F0BBB /* SnowflakesMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA597261FB1BB76003F0BBB /* SnowflakesMakerTests.swift */; };
+		6EA597651FB1C99A003F0BBB /* SnowflakesMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA597641FB1C99A003F0BBB /* SnowflakesMaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		6EA597241FB1BB76003F0BBB /* SnowflakesMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnowflakesMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA597261FB1BB76003F0BBB /* SnowflakesMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowflakesMakerTests.swift; sourceTree = "<group>"; };
 		6EA597281FB1BB76003F0BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EA597631FB1C99A003F0BBB /* SnowflakesMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowflakesMaker.h; sourceTree = "<group>"; };
+		6EA597641FB1C99A003F0BBB /* SnowflakesMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowflakesMaker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				6E5614FA16940F3500970AC1 /* ViewController.h */,
 				6E5614FB16940F3500970AC1 /* ViewController.m */,
 				6E5614FD16940F3500970AC1 /* ViewController_iPhone.xib */,
+				6EA597631FB1C99A003F0BBB /* SnowflakesMaker.h */,
+				6EA597641FB1C99A003F0BBB /* SnowflakesMaker.m */,
 				6E5614E916940F3500970AC1 /* Supporting Files */,
 			);
 			path = SnowflakesMaker;
@@ -244,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5614EF16940F3500970AC1 /* main.m in Sources */,
+				6EA597651FB1C99A003F0BBB /* SnowflakesMaker.m in Sources */,
 				6E5614F316940F3500970AC1 /* AppDelegate.m in Sources */,
 				6E5614FC16940F3500970AC1 /* ViewController.m in Sources */,
 			);
