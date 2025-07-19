@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Oleksiy Radyvanyuk. All rights reserved.
 //
 
+/*
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
@@ -15,3 +16,4 @@
 - (IBAction)onRefresh:(id)sender;
 
 @end
+*/

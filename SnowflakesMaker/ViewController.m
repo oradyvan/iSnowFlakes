@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Oleksiy Radyvanyuk. All rights reserved.
 //
 
+/*
 #import "ViewController.h"
 #import "SnowflakesMaker.h"
 
@@ -86,3 +87,4 @@ NSInteger const kMaxPhases = 3;
 }
 
 @end
+*/
