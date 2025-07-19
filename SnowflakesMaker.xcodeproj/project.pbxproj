@@ -3,23 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E3C2F311FB1EE1C00C67E88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3C2F301FB1EE1C00C67E88 /* Images.xcassets */; };
 		6E5614E316940F3500970AC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5614E216940F3500970AC1 /* UIKit.framework */; };
 		6E5614E516940F3500970AC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5614E416940F3500970AC1 /* Foundation.framework */; };
 		6E5614E716940F3500970AC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5614E616940F3500970AC1 /* CoreGraphics.framework */; };
-		6E5614ED16940F3500970AC1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E5614EB16940F3500970AC1 /* InfoPlist.strings */; };
-		6E5614F316940F3500970AC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5614F216940F3500970AC1 /* AppDelegate.swift */; };
-		6E5614F516940F3500970AC1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5614F416940F3500970AC1 /* Default.png */; };
-		6E5614F716940F3500970AC1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5614F616940F3500970AC1 /* Default@2x.png */; };
-		6E5614F916940F3500970AC1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5614F816940F3500970AC1 /* Default-568h@2x.png */; };
-		6E5614FC16940F3500970AC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5614FB16940F3500970AC1 /* ViewController.m */; };
-		6E5614FF16940F3500970AC1 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5614FD16940F3500970AC1 /* ViewController_iPhone.xib */; };
-		6EA597271FB1BB76003F0BBB /* SnowflakesMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA597261FB1BB76003F0BBB /* SnowflakesMakerTests.swift */; };
-		6EA597651FB1C99A003F0BBB /* SnowflakesMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA597641FB1C99A003F0BBB /* SnowflakesMaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,28 +23,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6E3C2F301FB1EE1C00C67E88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6E5614DE16940F3500970AC1 /* SnowflakesMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowflakesMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5614E216940F3500970AC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6E5614E416940F3500970AC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E5614E616940F3500970AC1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6E5614EA16940F3500970AC1 /* SnowflakesMaker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SnowflakesMaker-Info.plist"; sourceTree = "<group>"; };
-		6E5614EC16940F3500970AC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6E5614F016940F3500970AC1 /* SnowflakesMaker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnowflakesMaker-Prefix.pch"; sourceTree = "<group>"; };
-		6E5614F216940F3500970AC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E5614F416940F3500970AC1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		6E5614F616940F3500970AC1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		6E5614F816940F3500970AC1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		6E5614FA16940F3500970AC1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6E5614FB16940F3500970AC1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6E5614FE16940F3500970AC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		6EA597241FB1BB76003F0BBB /* SnowflakesMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnowflakesMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EA597261FB1BB76003F0BBB /* SnowflakesMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowflakesMakerTests.swift; sourceTree = "<group>"; };
-		6EA597281FB1BB76003F0BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EA597631FB1C99A003F0BBB /* SnowflakesMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowflakesMaker.h; sourceTree = "<group>"; };
-		6EA597641FB1C99A003F0BBB /* SnowflakesMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowflakesMaker.m; sourceTree = "<group>"; };
-		6EA597661FB1D5C4003F0BBB /* SnowflakesMaker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnowflakesMaker-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6E8FDBE12E2B97D6004D7197 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"SnowflakesMaker-Info.plist",
+			);
+			target = 6E5614DD16940F3500970AC1 /* SnowflakesMaker */;
+		};
+		6E8FDBE62E2B97DA004D7197 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SnowflakesMakerTests.swift,
+			);
+			target = 6EA597231FB1BB76003F0BBB /* SnowflakesMakerTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6E8FDBD62E2B97D6004D7197 /* SnowflakesMaker */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (6E8FDBE12E2B97D6004D7197 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SnowflakesMaker; sourceTree = "<group>"; };
+		6E8FDBE42E2B97DA004D7197 /* SnowflakesMakerTests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (6E8FDBE62E2B97DA004D7197 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SnowflakesMakerTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6E5614DB16940F3500970AC1 /* Frameworks */ = {
@@ -80,8 +76,8 @@
 		6E5614D316940F3500970AC1 = {
 			isa = PBXGroup;
 			children = (
-				6E5614E816940F3500970AC1 /* SnowflakesMaker */,
-				6EA597251FB1BB76003F0BBB /* SnowflakesMakerTests */,
+				6E8FDBD62E2B97D6004D7197 /* SnowflakesMaker */,
+				6E8FDBE42E2B97DA004D7197 /* SnowflakesMakerTests */,
 				6E5614E116940F3500970AC1 /* Frameworks */,
 				6E5614DF16940F3500970AC1 /* Products */,
 			);
@@ -106,44 +102,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6E5614E816940F3500970AC1 /* SnowflakesMaker */ = {
-			isa = PBXGroup;
-			children = (
-				6E5614F216940F3500970AC1 /* AppDelegate.swift */,
-				6E5614FA16940F3500970AC1 /* ViewController.h */,
-				6E5614FB16940F3500970AC1 /* ViewController.m */,
-				6E5614FD16940F3500970AC1 /* ViewController_iPhone.xib */,
-				6EA597631FB1C99A003F0BBB /* SnowflakesMaker.h */,
-				6EA597641FB1C99A003F0BBB /* SnowflakesMaker.m */,
-				6E3C2F301FB1EE1C00C67E88 /* Images.xcassets */,
-				6E5614E916940F3500970AC1 /* Supporting Files */,
-			);
-			path = SnowflakesMaker;
-			sourceTree = "<group>";
-		};
-		6E5614E916940F3500970AC1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6E5614EA16940F3500970AC1 /* SnowflakesMaker-Info.plist */,
-				6E5614EB16940F3500970AC1 /* InfoPlist.strings */,
-				6E5614F016940F3500970AC1 /* SnowflakesMaker-Prefix.pch */,
-				6E5614F416940F3500970AC1 /* Default.png */,
-				6E5614F616940F3500970AC1 /* Default@2x.png */,
-				6E5614F816940F3500970AC1 /* Default-568h@2x.png */,
-				6EA597661FB1D5C4003F0BBB /* SnowflakesMaker-Bridging-Header.h */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6EA597251FB1BB76003F0BBB /* SnowflakesMakerTests */ = {
-			isa = PBXGroup;
-			children = (
-				6EA597261FB1BB76003F0BBB /* SnowflakesMakerTests.swift */,
-				6EA597281FB1BB76003F0BBB /* Info.plist */,
-			);
-			path = SnowflakesMakerTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +116,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6E8FDBD62E2B97D6004D7197 /* SnowflakesMaker */,
 			);
 			name = SnowflakesMaker;
 			productName = SnowflakesMaker;
@@ -224,12 +185,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E5614ED16940F3500970AC1 /* InfoPlist.strings in Resources */,
-				6E5614F516940F3500970AC1 /* Default.png in Resources */,
-				6E5614F716940F3500970AC1 /* Default@2x.png in Resources */,
-				6E3C2F311FB1EE1C00C67E88 /* Images.xcassets in Resources */,
-				6E5614F916940F3500970AC1 /* Default-568h@2x.png in Resources */,
-				6E5614FF16940F3500970AC1 /* ViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,9 +202,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EA597651FB1C99A003F0BBB /* SnowflakesMaker.m in Sources */,
-				6E5614F316940F3500970AC1 /* AppDelegate.swift in Sources */,
-				6E5614FC16940F3500970AC1 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EA597271FB1BB76003F0BBB /* SnowflakesMakerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,25 +221,6 @@
 			targetProxy = 6EA597291FB1BB76003F0BBB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6E5614EB16940F3500970AC1 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E5614EC16940F3500970AC1 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6E5614FD16940F3500970AC1 /* ViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E5614FE16940F3500970AC1 /* en */,
-			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6E56150316940F3500970AC1 /* Debug */ = {
