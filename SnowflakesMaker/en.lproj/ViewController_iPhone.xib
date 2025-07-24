@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24093.9" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24057"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="SnowflakesMaker" customModuleProvider="target">
             <connections>
                 <outlet property="imgView" destination="8" id="36"/>
                 <outlet property="view" destination="6" id="7"/>
@@ -16,11 +15,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37">
-                    <rect key="frame" x="64" y="341" width="247" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37">
+                    <rect key="frame" x="64" y="439" width="265" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Refresh">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -29,11 +28,11 @@
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="onRefresh:" destination="-1" eventType="touchUpInside" id="50"/>
+                        <action selector="onRefresh" destination="-1" eventType="primaryActionTriggered" id="JV1-Zl-lOE"/>
                     </connections>
                 </button>
                 <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="72">
-                    <rect key="frame" x="75.5" y="55" width="224" height="224"/>
+                    <rect key="frame" x="84.666666666666686" y="153" width="224" height="224"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51">
                             <rect key="frame" x="1" y="1" width="222" height="222"/>
@@ -46,7 +45,7 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="backgroundColor" systemColor="darkTextColor"/>
                             <constraints>
                                 <constraint firstItem="8" firstAttribute="leading" secondItem="51" secondAttribute="leading" constant="1" id="24T-GU-fY1"/>
                                 <constraint firstAttribute="bottom" secondItem="8" secondAttribute="bottom" constant="1" id="2QK-Je-oM7"/>
@@ -64,7 +63,8 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <viewLayoutGuide key="safeArea" id="8lV-1D-eN0"/>
+            <color key="backgroundColor" systemColor="darkTextColor"/>
             <constraints>
                 <constraint firstItem="37" firstAttribute="leading" secondItem="8lV-1D-eN0" secondAttribute="leading" constant="64" id="Lwb-GJ-bIo"/>
                 <constraint firstItem="37" firstAttribute="centerX" secondItem="72" secondAttribute="centerX" id="OUb-Mg-UX2"/>
@@ -72,7 +72,12 @@
                 <constraint firstItem="37" firstAttribute="top" secondItem="72" secondAttribute="bottom" constant="62" id="duc-9p-EuK"/>
                 <constraint firstItem="72" firstAttribute="top" secondItem="8lV-1D-eN0" secondAttribute="top" constant="35" id="pYB-KM-GEU"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="8lV-1D-eN0"/>
+            <point key="canvasLocation" x="139" y="154"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -11,7 +11,10 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = scene as? UIWindowScene else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = MainViewController()
+        window.rootViewController = MainViewController(
+            nibName: "ViewController_iPhone",
+            bundle: nil
+        )
         self.window = window
         window.makeKeyAndVisible()
     }
