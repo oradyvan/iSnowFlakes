@@ -22,19 +22,49 @@ struct SnowflakesMaker {
             width: (size.width / 2).rounded(),
             height: (size.height / 2).rounded()
         )
-        return UIImage()
+
+        guard let branch = randomizeOneSnowflakeBranch(in: rect) else {
+            return UIImage()
+        }
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        guard let context = CGContext(
+            data: nil,
+            width: Int(size.width),
+            height: Int(size.height),
+            bitsPerComponent: 8,
+            bytesPerRow: Int(size.width) * 4,
+            space: colorSpace,
+            bitmapInfo: /*UInt32 ???*/0 // kCGImageAlphaPremultipliedLast
+        ) else { return UIImage() }
+        let bounds = CGRect(x: 0.0, y: 0.0, width: rect.size.width, height: rect.size.height)
+
+        context.translateBy(x: rect.midX, y: rect.maxY)
+        context.draw(branch, in: bounds)
+
+        let deltaAngle: CGFloat = -.pi / 3
+        let dX: CGFloat = rect.midX * cos(deltaAngle)
+        let dY: CGFloat = -rect.midY * sin(deltaAngle)
+
+        for _ in 1..<6 {
+            context.translateBy(x: dX, y: dY)
+            context.rotate(by: deltaAngle)
+            context.draw(branch, in: bounds)
+        }
+
+        let cgImage = context.makeImage()!
+        return UIImage(cgImage: cgImage)
     }
 
     func randomizeOneSnowflakeBranch(in rect: CGRect) -> CGImage? {
-        let cs = CGColorSpaceCreateDeviceRGB()
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
         guard let context = CGContext(
             data: nil,
             width: Int(rect.size.width),
             height: Int(rect.size.height),
             bitsPerComponent: 8,
             bytesPerRow: Int(rect.size.width) * 4,
-            space: cs,
-            bitmapInfo: /*UInt32 ???*/0
+            space: colorSpace,
+            bitmapInfo: /*UInt32 ???*/0 // kCGImageAlphaPremultipliedLast
         ) else { return nil }
         context.setStrokeColor(UIColor.white.cgColor)
         context.clear(rect)
@@ -83,46 +113,3 @@ struct SnowflakesMaker {
         return context.makeImage()
     }
 }
-
-/*
-- (UIImage *)createSnowflake {
-    // creating image for the quarter size of the image view
-    CGFloat scale = self.screenScale;
-    CGSize size = self.size;
-    size.width = scale * roundf(size.width / 2);
-    size.height = scale * roundf(size.height / 2);
-    CGRect rect = CGRectMake(0.0f, 0.0f,
-                             floorf(size.width / 2),
-                             floorf(size.height / 2));
-
-    CGImageRef branchRef = [self randomizeOneSnowflakeBranchInRect:rect];
-
-    CGColorSpaceRef cs = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(NULL, size.width, size.height, 8, size.width * 4, cs, kCGImageAlphaPremultipliedLast);
-    CGRect bounds = CGRectMake(0.0f, 0.0f, rect.size.width, rect.size.height);
-
-    CGContextTranslateCTM(context, CGRectGetMidX(rect), CGRectGetMaxY(rect));
-    CGContextDrawImage(context, bounds, branchRef);
-
-    CGFloat deltaAngle = -M_PI / 3;
-    CGFloat dX = CGRectGetMidX(rect)*cosf(deltaAngle);
-    CGFloat dY = -CGRectGetMidY(rect)*sinf(deltaAngle);
-
-    for (int i = 1; i < 6; i++) {
-        CGContextTranslateCTM(context, dX, dY);
-        CGContextRotateCTM(context, deltaAngle);
-        CGContextDrawImage(context, bounds, branchRef);
-    }
-
-    CGImageRef imageRef = CGBitmapContextCreateImage(context);
-    UIImage *image = [UIImage imageWithCGImage:imageRef];
-
-    // tidy up
-    CGImageRelease(branchRef);
-    CGImageRelease(imageRef);
-    CGContextRelease(context);
-    CGColorSpaceRelease(cs);
-
-    return image;
-}
-*/
