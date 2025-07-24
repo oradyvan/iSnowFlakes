@@ -34,7 +34,7 @@ struct SnowflakesMaker {
             bitsPerComponent: 8,
             bytesPerRow: Int(size.width) * 4,
             space: colorSpace,
-            bitmapInfo: /*UInt32 ???*/0 // kCGImageAlphaPremultipliedLast
+            bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
         ) else { return UIImage() }
         let bounds = CGRect(x: 0.0, y: 0.0, width: rect.size.width, height: rect.size.height)
 
@@ -64,7 +64,7 @@ struct SnowflakesMaker {
             bitsPerComponent: 8,
             bytesPerRow: Int(rect.size.width) * 4,
             space: colorSpace,
-            bitmapInfo: /*UInt32 ???*/0 // kCGImageAlphaPremultipliedLast
+            bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
         ) else { return nil }
         context.setStrokeColor(UIColor.white.cgColor)
         context.clear(rect)
