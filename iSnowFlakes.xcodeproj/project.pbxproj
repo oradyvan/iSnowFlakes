@@ -33,6 +33,7 @@
 		6ED22CA42E33909F002BE352 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakesTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Info.plist,
 				iSnowFlakes.xctestplan,
 			);
 			target = 6E70395B2E338EEC001331B2 /* iSnowFlakesTests */;
