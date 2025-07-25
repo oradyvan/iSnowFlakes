@@ -41,7 +41,7 @@ final class MainViewController: UIViewController {
     }
 
     @IBAction func onRefresh() {
-        print(#function)
+        imgView.image = maker.createSnowflake()
     }
 
     @objc func onTimer() {
