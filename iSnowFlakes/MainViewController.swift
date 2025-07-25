@@ -1,3 +1,4 @@
+import SwiftUI
 import UIKit
 
 final class MainViewController: UIViewController {
@@ -83,5 +84,21 @@ final class MainViewController: UIViewController {
             view.addSubview(snowflake)
             snowflakes.append(snowflake)
         }
+    }
+}
+
+struct MainView: UIViewControllerRepresentable {
+
+    typealias UIViewControllerType = MainViewController
+
+    func makeUIViewController(context: Context) -> MainViewController {
+        MainViewController(
+            nibName: "ViewController_iPhone",
+            bundle: nil
+        )
+    }
+
+    func updateUIViewController(_ uiViewController: MainViewController, context: Context) {
+        // no-op
     }
 }
