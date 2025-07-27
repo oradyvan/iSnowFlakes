@@ -17,6 +17,7 @@ final class MainViewController: UIViewController {
     private var maker: SnowflakesMaker!
     private var snowflakes: [UIImageView] = []
     private var rotationTimer: Timer?
+    private var snowflakeParticle: SnowflakeParticle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,18 +50,9 @@ final class MainViewController: UIViewController {
 
     @IBAction func onRotate() {
         if rotationTimer == nil {
-            rotateButton.setTitle("Stop", for: .normal)
-            rotationTimer = Timer.scheduledTimer(
-                timeInterval: kTimerRate,
-                target: self,
-                selector: #selector(onNextRotation),
-                userInfo: nil,
-                repeats: true
-            )
+            startRotating()
         } else {
-            rotationTimer?.invalidate()
-            rotationTimer = nil
-            rotateButton.setTitle("Rotate", for: .normal)
+            stopRotating()
         }
     }
 
@@ -105,9 +97,34 @@ final class MainViewController: UIViewController {
         }
     }
 
-    @objc func onNextRotation() {
-        let rotationAngle = CGFloat.random(in: kMinSnowflakeRatio...kMaxSnowflakeRatio)
-        imgView.transform = imgView.transform.rotated(by: rotationAngle)
+    private func startRotating() {
+        rotateButton.setTitle("Stop", for: .normal)
+        rotationTimer = Timer.scheduledTimer(
+            timeInterval: kTimerRate,
+            target: self,
+            selector: #selector(onNextRotation),
+            userInfo: nil,
+            repeats: true
+        )
+
+        let angle: CGFloat
+        if let oldParticle = snowflakeParticle {
+            angle = -oldParticle.rotationAngle
+        } else {
+            angle = CGFloat.random(in: kMinSnowflakeRatio...kMaxSnowflakeRatio)
+        }
+        snowflakeParticle = SnowflakeParticle(rotationAngle: angle)
+    }
+
+    private func stopRotating() {
+        rotationTimer?.invalidate()
+        rotationTimer = nil
+        rotateButton.setTitle("Rotate", for: .normal)
+    }
+
+    @objc private func onNextRotation() {
+        guard let snowflakeParticle else { return }
+        imgView.transform = imgView.transform.rotated(by: snowflakeParticle.rotationAngle)
     }
 }
 
