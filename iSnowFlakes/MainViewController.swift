@@ -15,6 +15,8 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var rotateButton: UIButton!
 
     private var maker: SnowflakeMaker!
+    private var ruler: SnowflakeRuler!
+
     private var snowflakes: [UIImageView] = []
     private var rotationTimer: Timer?
     private var snowflakeParticle: SnowflakeParticle?
@@ -27,6 +29,13 @@ final class MainViewController: UIViewController {
         self.maker = SnowflakeMaker(
             size: imgView.frame.size,
             screenScale: UIScreen.main.scale
+        )
+
+        // initialize the engine controlling the life cycle of
+        // the snowflakes as particles
+        self.ruler = SnowflakeRuler(
+            numberOfSnowflakes: kNumberOfSnowflakes,
+            size: view.frame.size
         )
 
         // seed the random generator
@@ -61,16 +70,13 @@ final class MainViewController: UIViewController {
 
         // move existing snowflakes down one step
         snowflakes.forEach { snowflake in
-            var frame = snowflake.frame
-            frame.origin.y += kFallSpeed
-            let x: CGFloat = frame.origin.y / view.frame.height * CGFloat(snowflake.tag) * .pi
-
-            frame.origin.x += kFallSpeed * sin(x / 2) * cos(5 * x / 6)
-            snowflake.frame = frame
+            let particle = ruler.moveParticle(snowflake.tag)
+            snowflake.frame = particle.frame
 
             // if the snowflake falls off the screen, mark it for removal
-            if frame.origin.y > view.frame.height {
+            if snowflake.frame.origin.y > view.frame.height {
                 flakesToRemove.append(snowflake)
+                ruler.destroyParticle(snowflake.tag)
                 snowflake.removeFromSuperview()
             }
         }
@@ -80,15 +86,12 @@ final class MainViewController: UIViewController {
 
         // add new snowflake
         if snowflakes.count < kNumberOfSnowflakes {
-            let flakeSize: CGFloat = view.frame.width * CGFloat.random(in: kMinSnowflakeRatio...kMaxSnowflakeRatio)
-            let minX: CGFloat = -flakeSize
-            let maxX: CGFloat = view.frame.width - flakeSize / 2
-            let flakeX: CGFloat = CGFloat.random(in: minX...maxX)
-            let flakeFrame = CGRect(x: flakeX, y: -flakeSize, width: flakeSize, height: flakeSize).integral
-            let snowflake = UIImageView(frame: flakeFrame)
+            // generate new particle
+            let (tag, particle) = ruler.createParticle()
+            let snowflake = UIImageView(frame: particle.frame)
 
-            // choosing random value of number of phases
-            snowflake.tag = Int.random(in: kMinPhases...kMaxPhases)
+            // store the reference to the particle
+            snowflake.tag = tag
 
             // generating unique snowflake image
             snowflake.image = maker.createSnowflake()
@@ -113,7 +116,11 @@ final class MainViewController: UIViewController {
         } else {
             angle = CGFloat.random(in: kMinSnowflakeRatio...kMaxSnowflakeRatio)
         }
-        snowflakeParticle = SnowflakeParticle(rotationAngle: angle)
+        snowflakeParticle = SnowflakeParticle(
+            rotationAngle: angle,
+            frame: .zero,
+            phase: 0
+        )
     }
 
     private func stopRotating() {
