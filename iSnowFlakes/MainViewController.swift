@@ -12,9 +12,11 @@ final class MainViewController: UIViewController {
     private let kMaxPhases: Int = 3
 
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var rotateButton: UIButton!
 
     private var maker: SnowflakesMaker!
     private var snowflakes: [UIImageView] = []
+    private var rotationTimer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,23 @@ final class MainViewController: UIViewController {
 
     @IBAction func onRefresh() {
         imgView.image = maker.createSnowflake()
+    }
+
+    @IBAction func onRotate() {
+        if rotationTimer == nil {
+            rotateButton.setTitle("Stop", for: .normal)
+            rotationTimer = Timer.scheduledTimer(
+                timeInterval: kTimerRate,
+                target: self,
+                selector: #selector(onNextRotation),
+                userInfo: nil,
+                repeats: true
+            )
+        } else {
+            rotationTimer?.invalidate()
+            rotationTimer = nil
+            rotateButton.setTitle("Rotate", for: .normal)
+        }
     }
 
     @objc func onTimer() {
@@ -84,6 +103,11 @@ final class MainViewController: UIViewController {
             view.addSubview(snowflake)
             snowflakes.append(snowflake)
         }
+    }
+
+    @objc func onNextRotation() {
+        let rotationAngle = CGFloat.random(in: kMinSnowflakeRatio...kMaxSnowflakeRatio)
+        imgView.transform = imgView.transform.rotated(by: rotationAngle)
     }
 }
 

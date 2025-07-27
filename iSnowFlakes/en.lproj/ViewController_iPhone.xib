@@ -7,9 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="SnowflakesMaker" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="iSnowFlakes" customModuleProvider="target">
             <connections>
                 <outlet property="imgView" destination="8" id="36"/>
+                <outlet property="rotateButton" destination="URn-Zx-SmZ" id="7jg-bg-4AW"/>
                 <outlet property="view" destination="6" id="7"/>
             </connections>
         </placeholder>
@@ -29,6 +30,19 @@
                     </state>
                     <connections>
                         <action selector="onRefresh" destination="-1" eventType="primaryActionTriggered" id="JV1-Zl-lOE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URn-Zx-SmZ">
+                    <rect key="frame" x="64" y="477" width="265" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Rotate">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onRotate" destination="-1" eventType="primaryActionTriggered" id="pVc-P5-2Jf"/>
                     </connections>
                 </button>
                 <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="72">
@@ -67,10 +81,13 @@
             <color key="backgroundColor" systemColor="darkTextColor"/>
             <constraints>
                 <constraint firstItem="37" firstAttribute="leading" secondItem="8lV-1D-eN0" secondAttribute="leading" constant="64" id="Lwb-GJ-bIo"/>
+                <constraint firstItem="URn-Zx-SmZ" firstAttribute="width" secondItem="37" secondAttribute="width" id="Nwe-bJ-IBs"/>
                 <constraint firstItem="37" firstAttribute="centerX" secondItem="72" secondAttribute="centerX" id="OUb-Mg-UX2"/>
                 <constraint firstItem="72" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="bpG-Gp-37Q"/>
                 <constraint firstItem="37" firstAttribute="top" secondItem="72" secondAttribute="bottom" constant="62" id="duc-9p-EuK"/>
+                <constraint firstItem="URn-Zx-SmZ" firstAttribute="centerX" secondItem="37" secondAttribute="centerX" id="jqI-kg-RwG"/>
                 <constraint firstItem="72" firstAttribute="top" secondItem="8lV-1D-eN0" secondAttribute="top" constant="35" id="pYB-KM-GEU"/>
+                <constraint firstItem="URn-Zx-SmZ" firstAttribute="top" secondItem="37" secondAttribute="bottom" constant="8" id="sUL-OL-UbY"/>
             </constraints>
             <point key="canvasLocation" x="139" y="154"/>
         </view>
