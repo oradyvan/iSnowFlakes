@@ -14,7 +14,7 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var rotateButton: UIButton!
 
-    private var maker: SnowflakesMaker!
+    private var maker: SnowflakeMaker!
     private var snowflakes: [UIImageView] = []
     private var rotationTimer: Timer?
     private var snowflakeParticle: SnowflakeParticle?
@@ -24,7 +24,7 @@ final class MainViewController: UIViewController {
         view.backgroundColor = .black
 
         // initializer the main engine of making the sowflakes
-        self.maker = SnowflakesMaker(
+        self.maker = SnowflakeMaker(
             size: imgView.frame.size,
             screenScale: UIScreen.main.scale
         )

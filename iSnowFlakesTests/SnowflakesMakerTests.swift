@@ -16,8 +16,8 @@ struct SnowflakesMakerTests {
 }
 
 private struct Environment {
-    func makeSUT() -> SnowflakesMaker {
-        SnowflakesMaker(
+    func makeSUT() -> SnowflakeMaker {
+        SnowflakeMaker(
             size: CGSize(width: 200, height: 200),
             screenScale: 2.0
         )

@@ -1,6 +1,6 @@
 import UIKit
 
-struct SnowflakesMaker {
+struct SnowflakeMaker {
     let size: CGSize
     let screenScale: CGFloat
 
