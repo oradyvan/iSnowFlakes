@@ -7,7 +7,6 @@ final class SnowflakeRuler {
 
     private let kMinSnowflakeRatio: CGFloat = 0.05
     private let kMaxSnowflakeRatio: CGFloat = 0.1
-    //private let kTimerRate: TimeInterval = 0.05
     private let kFallSpeed: CGFloat = 5.0
     private let kMinPhases: Int = 1
     private let kMaxPhases: Int = 3
@@ -15,7 +14,7 @@ final class SnowflakeRuler {
     private var sequenceNumber: Int = 0
     private var snowflakes: [Int: SnowflakeParticle] = [:]
 
-    init(numberOfSnowflakes: Int = 128, size: CGSize) {
+    init(numberOfSnowflakes: Int, size: CGSize) {
         self.numberOfSnowflakes = numberOfSnowflakes
         self.size = size
     }
@@ -29,8 +28,15 @@ final class SnowflakeRuler {
 
         // choosing random value of number of phases
         let phase = Int.random(in: kMinPhases...kMaxPhases)
+
+        // choosing random angle of rotation
+        let angle = CGFloat.random(in: kMinSnowflakeRatio...kMaxSnowflakeRatio)
+
+        // choosing random direction of rotation
+        let sign: CGFloat = Bool.random() ? 1 : -1
+
         let particle = SnowflakeParticle(
-            rotationAngle: 0.0,
+            rotationAngle: sign * angle,
             frame: flakeFrame,
             phase: phase
         )
@@ -48,8 +54,8 @@ final class SnowflakeRuler {
 
         var frame = particle.frame
         frame.origin.y += kFallSpeed
-        let x: CGFloat = frame.origin.y / size.height * CGFloat(particle.phase) * .pi
 
+        let x: CGFloat = frame.origin.y / size.height * CGFloat(particle.phase) * .pi
         frame.origin.x += kFallSpeed * sin(x / 2) * cos(5 * x / 6)
 
         let updatedParticle = SnowflakeParticle(

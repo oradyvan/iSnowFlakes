@@ -25,13 +25,13 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
 
-        // initializer the main engine of making the sowflakes
+        // initialise the main engine of making the sowflakes
         self.maker = SnowflakeMaker(
             size: imgView.frame.size,
             screenScale: UIScreen.main.scale
         )
 
-        // initialize the engine controlling the life cycle of
+        // initialise the engine controlling the life cycle of
         // the snowflakes as particles
         self.ruler = SnowflakeRuler(
             numberOfSnowflakes: kNumberOfSnowflakes,
@@ -71,7 +71,12 @@ final class MainViewController: UIViewController {
         // move existing snowflakes down one step
         snowflakes.forEach { snowflake in
             let particle = ruler.moveParticle(snowflake.tag)
-            snowflake.frame = particle.frame
+
+            // update the center of the snoflake by the updated particle frame
+            snowflake.center = CGPoint(x: particle.frame.midX, y: particle.frame.midY)
+
+            // rotate the snowflake a bit
+            snowflake.transform = snowflake.transform.rotated(by: particle.rotationAngle)
 
             // if the snowflake falls off the screen, mark it for removal
             if snowflake.frame.origin.y > view.frame.height {
