@@ -30,7 +30,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:iSnowFlakes.xctestplan"
+            reference = "container:iSnowFlakesTests/iSnowFlakes.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
