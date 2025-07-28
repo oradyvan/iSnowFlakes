@@ -25,7 +25,7 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
 
-        // initialise the main engine of making the sowflakes
+        // initialise the main engine of making the snowflakes
         self.maker = SnowflakeMaker(
             size: imgView.frame.size,
             screenScale: UIScreen.main.scale
@@ -72,7 +72,7 @@ final class MainViewController: UIViewController {
         snowflakes.forEach { snowflake in
             let particle = ruler.moveParticle(snowflake.tag)
 
-            // update the center of the snoflake by the updated particle frame
+            // update the centre of the snowflake by the updated particle frame
             snowflake.center = CGPoint(x: particle.frame.midX, y: particle.frame.midY)
 
             // rotate the snowflake a bit

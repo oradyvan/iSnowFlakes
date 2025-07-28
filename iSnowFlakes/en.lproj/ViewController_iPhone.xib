@@ -59,7 +59,7 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="darkTextColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="8" firstAttribute="leading" secondItem="51" secondAttribute="leading" constant="1" id="24T-GU-fY1"/>
                                 <constraint firstAttribute="bottom" secondItem="8" secondAttribute="bottom" constant="1" id="2QK-Je-oM7"/>

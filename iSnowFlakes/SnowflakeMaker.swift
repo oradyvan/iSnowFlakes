@@ -66,13 +66,15 @@ struct SnowflakeMaker {
             space: colorSpace,
             bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
         ) else { return nil }
-        context.setStrokeColor(UIColor.white.cgColor)
         context.clear(rect)
 
         // going top to bottom in the middle of the image
-        context.move(to: CGPoint(x: rect.midX, y: rect.maxY))
-        context.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
-        context.drawPath(using: .stroke)
+        drawBoldLine(
+            in: context,
+            from: CGPoint(x: rect.midX, y: rect.maxY),
+            to: CGPoint(x: rect.midX, y: rect.minY),
+            shiftX: 1.0
+        )
 
         let numRects: Int = Int.random(in: kMinRects...kMaxRects)
         let h = rect.height
@@ -90,7 +92,7 @@ struct SnowflakeMaker {
             // and by the random amount of points vertically
             square = square.offsetBy(dx: rect.midX - rectExtent / 2, dy: yPos)
 
-            // centering and rotating context so that the rect is drawn as a diamond
+            // centring and rotating context so that the rect is drawn as a diamond
             context.saveGState()
             context.translateBy(x: square.midX, y: square.midY)
             context.rotate(by: .pi / 4)
@@ -98,18 +100,51 @@ struct SnowflakeMaker {
             let bounds = CGRect(x: 0.0, y: 0.0, width: square.size.width, height: square.size.height)
 
             // draw line from bottom left to bottom right corner
-            context.move(to: CGPoint(x: bounds.minX, y: bounds.minY))
-            context.addLine(to: CGPoint(x: bounds.maxX, y: bounds.minY))
+            drawBoldLine(
+                in: context,
+                from: CGPoint(x: bounds.minX, y: bounds.minY),
+                to: CGPoint(x: bounds.maxX, y: bounds.minY),
+                shiftY: 1.0
+            )
 
             // draw line from bottom left to top left corner
-            context.move(to: CGPoint(x: bounds.minX, y: bounds.minY))
-            context.addLine(to: CGPoint(x: bounds.minX, y: bounds.maxY))
+            drawBoldLine(
+                in: context,
+                from: CGPoint(x: bounds.minX, y: bounds.minY),
+                to: CGPoint(x: bounds.minX, y: bounds.maxY),
+                shiftX: 1.0
+            )
 
-            // stroke the lines
-            context.strokePath()
+            // rotate the graphics context back to the initial state
             context.restoreGState()
         }
 
         return context.makeImage()
+    }
+
+    private func drawBoldLine(
+        in context: CGContext,
+        from startPoint: CGPoint,
+        to endPoint: CGPoint,
+        shiftX: CGFloat = 0,
+        shiftY: CGFloat = 0
+    ) {
+        let leftStartPoint = CGPoint(x: startPoint.x - shiftX, y: startPoint.y - shiftY)
+        let leftEndPoint = CGPoint(x: endPoint.x - shiftX, y: endPoint.y - shiftY)
+        context.move(to: leftStartPoint)
+        context.addLine(to: leftEndPoint)
+
+        let rightStartPoint = CGPoint(x: startPoint.x + shiftX, y: startPoint.y + shiftY)
+        let rightEndPoint = CGPoint(x: endPoint.x + shiftX, y: endPoint.y + shiftY)
+        context.move(to: rightStartPoint)
+        context.addLine(to: rightEndPoint)
+
+        context.setStrokeColor(UIColor.black.cgColor)
+        context.strokePath()
+
+        context.move(to: startPoint)
+        context.addLine(to: endPoint)
+        context.setStrokeColor(UIColor.white.cgColor)
+        context.strokePath()
     }
 }
