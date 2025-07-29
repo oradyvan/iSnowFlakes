@@ -7,9 +7,6 @@ final class MainViewController: UIViewController {
     private let kMinSnowflakeRatio: CGFloat = 0.05
     private let kMaxSnowflakeRatio: CGFloat = 0.1
     private let kTimerRate: TimeInterval = 0.05
-    private let kFallSpeed: CGFloat = 5.0
-    private let kMinPhases: Int = 1
-    private let kMaxPhases: Int = 3
 
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var rotateButton: UIButton!
@@ -37,9 +34,6 @@ final class MainViewController: UIViewController {
             numberOfSnowflakes: kNumberOfSnowflakes,
             size: view.frame.size
         )
-
-        // seed the random generator
-        srandom(UInt32(Date.timeIntervalSinceReferenceDate))
 
         // draw a sample of a snowflake
         imgView.image = maker.createSnowflake()

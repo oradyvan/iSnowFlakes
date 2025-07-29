@@ -17,6 +17,9 @@ final class SnowflakeRuler {
     init(numberOfSnowflakes: Int, size: CGSize) {
         self.numberOfSnowflakes = numberOfSnowflakes
         self.size = size
+
+        // seed the random generator
+        srandom(UInt32(Date.timeIntervalSinceReferenceDate))
     }
 
     func createParticle() -> (Int, SnowflakeParticle) {
