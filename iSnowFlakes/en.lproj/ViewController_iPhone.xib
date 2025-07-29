@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37">
-                    <rect key="frame" x="64" y="439" width="265" height="30"/>
+                    <rect key="frame" x="64" y="369" width="265" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Refresh">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -33,7 +33,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URn-Zx-SmZ">
-                    <rect key="frame" x="64" y="477" width="265" height="30"/>
+                    <rect key="frame" x="64" y="407" width="265" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Rotate">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,15 +46,15 @@
                     </connections>
                 </button>
                 <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="72">
-                    <rect key="frame" x="84.666666666666686" y="153" width="224" height="224"/>
+                    <rect key="frame" x="119.66666666666669" y="153" width="154" height="154"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51">
-                            <rect key="frame" x="1" y="1" width="222" height="222"/>
+                            <rect key="frame" x="1" y="1" width="152" height="152"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8">
-                                    <rect key="frame" x="1" y="1" width="220" height="220"/>
+                                    <rect key="frame" x="1" y="1" width="150" height="150"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="220" id="1AZ-Kf-2Kh"/>
+                                        <constraint firstAttribute="width" constant="150" id="1AZ-Kf-2Kh"/>
                                         <constraint firstAttribute="width" secondItem="8" secondAttribute="height" multiplier="1:1" id="NU7-zP-d0A"/>
                                     </constraints>
                                 </imageView>
