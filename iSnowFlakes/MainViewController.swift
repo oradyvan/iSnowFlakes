@@ -3,7 +3,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-    private let kNumberOfSnowflakes: Int = 128
+    private let kNumberOfSnowflakes: Int = 256
     private let kMinSnowflakeRatio: CGFloat = 0.05
     private let kMaxSnowflakeRatio: CGFloat = 0.1
     private let kTimerRate: TimeInterval = 0.05
@@ -20,7 +20,8 @@ final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .systemBackground
+        edgesForExtendedLayout = .all
 
         // initialise the main engine of making the snowflakes
         self.maker = SnowflakeMaker(
@@ -73,7 +74,7 @@ final class MainViewController: UIViewController {
             snowflake.transform = snowflake.transform.rotated(by: particle.rotationAngle)
 
             // if the snowflake falls off the screen, mark it for removal
-            if snowflake.frame.origin.y > view.frame.height {
+            if ruler.shouldDestroy(particle: particle) {
                 flakesToRemove.append(snowflake)
                 ruler.destroyParticle(snowflake.tag)
                 snowflake.removeFromSuperview()

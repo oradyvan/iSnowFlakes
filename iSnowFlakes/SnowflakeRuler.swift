@@ -69,4 +69,8 @@ final class SnowflakeRuler {
         snowflakes[id] = updatedParticle
         return updatedParticle
     }
+
+    func shouldDestroy(particle: SnowflakeParticle) -> Bool {
+        particle.frame.maxY > size.height
+    }
 }
