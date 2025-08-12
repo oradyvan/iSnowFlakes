@@ -13,6 +13,7 @@ final class SnowflakeRuler {
 
     private var sequenceNumber: Int = 0
     private var snowflakes: [Int: SnowflakeParticle] = [:]
+    private var presetWidths: [CGFloat] = []
 
     init(numberOfSnowflakes: Int, size: CGSize) {
         self.numberOfSnowflakes = numberOfSnowflakes
@@ -20,10 +21,14 @@ final class SnowflakeRuler {
 
         // seed the random generator
         srandom(UInt32(Date.timeIntervalSinceReferenceDate))
+
+        presetWidths.append(size.width * 0.1)
+        presetWidths.append(size.width * 0.05)
+        presetWidths.append(size.width * 0.02)
     }
 
     func createParticle() -> (Int, SnowflakeParticle) {
-        let flakeSize: CGFloat = size.width * CGFloat.random(in: kMinSnowflakeRatio...kMaxSnowflakeRatio)
+        let flakeSize: CGFloat = presetWidths.randomElement() ?? size.width
         let minX: CGFloat = -flakeSize
         let maxX: CGFloat = size.width - flakeSize / 2
         let flakeX: CGFloat = CGFloat.random(in: minX...maxX)
