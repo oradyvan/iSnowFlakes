@@ -7,9 +7,9 @@ final class SnowflakeRuler {
 
     private let kMinSnowflakeRatio: CGFloat = 0.05
     private let kMaxSnowflakeRatio: CGFloat = 0.1
-    private let kFallSpeed: CGFloat = 5.0
-    private let kMinPhases: Int = 1
-    private let kMaxPhases: Int = 3
+    private let kFallSpeed: CGFloat = 2.5
+    private let kMinPhases: Int
+    private let kMaxPhases: Int
 
     private var sequenceNumber: Int = 0
     private var snowflakes: [Int: SnowflakeParticle] = [:]
@@ -22,20 +22,24 @@ final class SnowflakeRuler {
         // seed the random generator
         srandom(UInt32(Date.timeIntervalSinceReferenceDate))
 
+        presetWidths.append(size.width * 0.03)
+        presetWidths.append(size.width * 0.06)
         presetWidths.append(size.width * 0.1)
-        presetWidths.append(size.width * 0.05)
-        presetWidths.append(size.width * 0.02)
+        kMinPhases = 1
+        kMaxPhases = presetWidths.count
     }
 
     func createParticle() -> (Int, SnowflakeParticle) {
-        let flakeSize: CGFloat = presetWidths.randomElement() ?? size.width
+        // choosing random value of number of phases
+        let phase = Int.random(in: kMinPhases...kMaxPhases)
+
+        // choosing one of the predefined widths for the particles
+        let flakeSize: CGFloat = presetWidths[phase - 1]
+
         let minX: CGFloat = -flakeSize
         let maxX: CGFloat = size.width - flakeSize / 2
         let flakeX: CGFloat = CGFloat.random(in: minX...maxX)
         let flakeFrame = CGRect(x: flakeX, y: -flakeSize, width: flakeSize, height: flakeSize).integral
-
-        // choosing random value of number of phases
-        let phase = Int.random(in: kMinPhases...kMaxPhases)
 
         // choosing random angle of rotation
         let angle = CGFloat.random(in: kMinSnowflakeRatio...kMaxSnowflakeRatio)
@@ -61,7 +65,7 @@ final class SnowflakeRuler {
         let particle = snowflakes[id]!
 
         var frame = particle.frame
-        frame.origin.y += kFallSpeed
+        frame.origin.y += kFallSpeed * CGFloat(particle.phase)
 
         let x: CGFloat = frame.origin.y / size.height * CGFloat(particle.phase) * .pi
         frame.origin.x += kFallSpeed * sin(x / 2) * cos(5 * x / 6)

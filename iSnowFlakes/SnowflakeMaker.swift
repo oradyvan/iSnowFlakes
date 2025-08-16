@@ -7,7 +7,7 @@ struct SnowflakeMaker {
     private let kMinRects: Int = 10
     private let kMaxRects: Int = 20
     private let kMinRectSizeRatio: CGFloat = 0.02
-    private let kMaxRectSizeRatio: CGFloat = 0.5
+    private let kMaxRectSizeRatio: CGFloat = 0.4
 
     func createSnowflake() -> UIImage {
         // creating image for the quarter size of the image view
