@@ -65,10 +65,12 @@ final class SnowflakeRuler {
         let particle = snowflakes[id]!
 
         var frame = particle.frame
-        frame.origin.y += kFallSpeed * CGFloat(particle.phase)
+        let fallSpeed = kFallSpeed * CGFloat(particle.phase)
+        frame.origin.y += fallSpeed
 
         let x: CGFloat = frame.origin.y / size.height * CGFloat(particle.phase) * .pi
-        frame.origin.x += kFallSpeed * sin(x / 2) * cos(5 * x / 6)
+        let shift = fallSpeed / 2 * (particle.rotationAngle > 0 ? -1 : 1)
+        frame.origin.x += shift * sin(x / 2) * cos(5 * x / 6)
 
         let updatedParticle = SnowflakeParticle(
             rotationAngle: particle.rotationAngle,
@@ -80,6 +82,8 @@ final class SnowflakeRuler {
     }
 
     func shouldDestroy(particle: SnowflakeParticle) -> Bool {
-        particle.frame.maxY > size.height
+        particle.frame.maxY > size.height ||
+        particle.frame.maxX < 0 ||
+        particle.frame.minX > size.width
     }
 }

@@ -3,7 +3,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-    private let kNumberOfSnowflakes: Int = 256
+    private let kNumberOfSnowflakes: Int = 200
     private let kMinSnowflakeRatio: CGFloat = 0.05
     private let kMaxSnowflakeRatio: CGFloat = 0.1
     private let kTimerRate: TimeInterval = 0.05
