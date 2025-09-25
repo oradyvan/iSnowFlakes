@@ -3,7 +3,7 @@ import CoreGraphics
 
 final class SnowflakeRuler {
     let numberOfSnowflakes: Int
-    let size: CGSize
+    var size: CGSize
 
     private let kMinSnowflakeRatio: CGFloat = 0.05
     private let kMaxSnowflakeRatio: CGFloat = 0.1
