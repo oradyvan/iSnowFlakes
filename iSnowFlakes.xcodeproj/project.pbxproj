@@ -58,7 +58,7 @@
 			);
 			target = 6E70395B2E338EEC001331B2 /* iSnowFlakesTests */;
 		};
-		6ED637B42E8540AB00087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakes" target */ = {
+		6ED637DD2E8542EB00087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakes" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				SnowflakesMakerTests.swift,
@@ -73,18 +73,18 @@
 			path = iSnowFlakesDemoApp;
 			sourceTree = "<group>";
 		};
-		6ED6375E2E853FCC00087D67 /* iSnowFlakes */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iSnowFlakes;
-			sourceTree = "<group>";
-		};
 		6ED637AA2E85404500087D67 /* iSnowFlakesTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				6ED637AE2E85404500087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakesTests" target */,
-				6ED637B42E8540AB00087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakes" target */,
+				6ED637DD2E8542EB00087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakes" target */,
 			);
 			path = iSnowFlakesTests;
+			sourceTree = "<group>";
+		};
+		6ED637D92E8542CD00087D67 /* iSnowFlakes */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = iSnowFlakes;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				6E7039512E338EEC001331B2 /* iSnowFlakesDemoApp */,
-				6ED6375E2E853FCC00087D67 /* iSnowFlakes */,
+				6ED637D92E8542CD00087D67 /* iSnowFlakes */,
 				6ED637AA2E85404500087D67 /* iSnowFlakesTests */,
 				6E7039502E338EEC001331B2 /* Products */,
 			);
@@ -205,8 +205,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				6ED6375E2E853FCC00087D67 /* iSnowFlakes */,
 				6ED637AA2E85404500087D67 /* iSnowFlakesTests */,
+				6ED637D92E8542CD00087D67 /* iSnowFlakes */,
 			);
 			name = iSnowFlakes;
 			packageProductDependencies = (
