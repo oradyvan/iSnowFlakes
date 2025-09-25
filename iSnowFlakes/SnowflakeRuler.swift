@@ -39,7 +39,12 @@ final class SnowflakeRuler {
         let minX: CGFloat = -flakeSize
         let maxX: CGFloat = size.width - flakeSize / 2
         let flakeX: CGFloat = CGFloat.random(in: minX...maxX)
-        let flakeFrame = CGRect(x: flakeX, y: -flakeSize, width: flakeSize, height: flakeSize).integral
+        var flakeFrame = CGRect(x: flakeX, y: -flakeSize, width: flakeSize, height: flakeSize).integral
+
+        // choose X position until there are no overlaps with the existing snowflakes
+        while snowflakes.values.contains(where: { $0.frame.intersects(flakeFrame) }) {
+            flakeFrame.origin.x = CGFloat.random(in: minX...maxX)
+        }
 
         // choosing random angle of rotation
         let angle = CGFloat.random(in: kMinSnowflakeRatio...kMaxSnowflakeRatio)
