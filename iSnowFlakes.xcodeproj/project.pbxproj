@@ -24,7 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6E70394F2E338EEC001331B2 /* iSnowFlakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSnowFlakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E70394F2E338EEC001331B2 /* iSnowFlakesDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSnowFlakesDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E70395C2E338EEC001331B2 /* iSnowFlakesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSnowFlakesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7039662E338EEC001331B2 /* iSnowFlakesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSnowFlakesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -41,9 +41,9 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		6E7039512E338EEC001331B2 /* iSnowFlakes */ = {
+		6E7039512E338EEC001331B2 /* iSnowFlakesDemoApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iSnowFlakes;
+			path = iSnowFlakesDemoApp;
 			sourceTree = "<group>";
 		};
 		6E70395F2E338EEC001331B2 /* iSnowFlakesTests */ = {
@@ -84,7 +84,7 @@
 		6E7039462E338EEC001331B2 = {
 			isa = PBXGroup;
 			children = (
-				6E7039512E338EEC001331B2 /* iSnowFlakes */,
+				6E7039512E338EEC001331B2 /* iSnowFlakesDemoApp */,
 				6E70395F2E338EEC001331B2 /* iSnowFlakesTests */,
 				6E7039502E338EEC001331B2 /* Products */,
 			);
@@ -93,7 +93,7 @@
 		6E7039502E338EEC001331B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E70394F2E338EEC001331B2 /* iSnowFlakes.app */,
+				6E70394F2E338EEC001331B2 /* iSnowFlakesDemoApp.app */,
 				6E70395C2E338EEC001331B2 /* iSnowFlakesTests.xctest */,
 				6E7039662E338EEC001331B2 /* iSnowFlakesUITests.xctest */,
 			);
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E70394E2E338EEC001331B2 /* iSnowFlakes */ = {
+		6E70394E2E338EEC001331B2 /* iSnowFlakesDemoApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E7039702E338EEC001331B2 /* Build configuration list for PBXNativeTarget "iSnowFlakes" */;
+			buildConfigurationList = 6E7039702E338EEC001331B2 /* Build configuration list for PBXNativeTarget "iSnowFlakesDemoApp" */;
 			buildPhases = (
 				6E70394B2E338EEC001331B2 /* Sources */,
 				6E70394C2E338EEC001331B2 /* Frameworks */,
@@ -116,13 +116,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				6E7039512E338EEC001331B2 /* iSnowFlakes */,
+				6E7039512E338EEC001331B2 /* iSnowFlakesDemoApp */,
 			);
-			name = iSnowFlakes;
+			name = iSnowFlakesDemoApp;
 			packageProductDependencies = (
 			);
 			productName = iSnowFlakes;
-			productReference = 6E70394F2E338EEC001331B2 /* iSnowFlakes.app */;
+			productReference = 6E70394F2E338EEC001331B2 /* iSnowFlakesDemoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6E70395B2E338EEC001331B2 /* iSnowFlakesTests */ = {
@@ -205,7 +205,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E70394E2E338EEC001331B2 /* iSnowFlakes */,
+				6E70394E2E338EEC001331B2 /* iSnowFlakesDemoApp */,
 				6E70395B2E338EEC001331B2 /* iSnowFlakesTests */,
 				6E7039652E338EEC001331B2 /* iSnowFlakesUITests */,
 			);
@@ -263,12 +263,12 @@
 /* Begin PBXTargetDependency section */
 		6E70395E2E338EEC001331B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E70394E2E338EEC001331B2 /* iSnowFlakes */;
+			target = 6E70394E2E338EEC001331B2 /* iSnowFlakesDemoApp */;
 			targetProxy = 6E70395D2E338EEC001331B2 /* PBXContainerItemProxy */;
 		};
 		6E7039682E338EEC001331B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E70394E2E338EEC001331B2 /* iSnowFlakes */;
+			target = 6E70394E2E338EEC001331B2 /* iSnowFlakesDemoApp */;
 			targetProxy = 6E7039672E338EEC001331B2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -405,6 +405,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Snow Flakes Demo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -438,6 +439,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Snow Flakes Demo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -557,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E7039702E338EEC001331B2 /* Build configuration list for PBXNativeTarget "iSnowFlakes" */ = {
+		6E7039702E338EEC001331B2 /* Build configuration list for PBXNativeTarget "iSnowFlakesDemoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E7039712E338EEC001331B2 /* Debug */,
