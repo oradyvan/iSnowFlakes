@@ -12,6 +12,15 @@ public final class SnowflakesViewController: UIViewController {
     private var ruler: SnowflakeRuler!
 
     private var snowflakes: [UIImageView] = []
+    private var addingSnowflakes: Bool = true
+
+    public func pause() {
+        addingSnowflakes = false
+    }
+
+    public func resume() {
+        addingSnowflakes = true
+    }
 
     public override func willMove(toParent parent: UIViewController?) {
         if let parent  {
@@ -79,7 +88,7 @@ public final class SnowflakesViewController: UIViewController {
         snowflakes.removeAll(where: flakesToRemove.contains)
 
         // add new snowflake
-        if snowflakes.count < kNumberOfSnowflakes {
+        if addingSnowflakes && snowflakes.count < kNumberOfSnowflakes {
             // generate new particle
             let (tag, particle) = ruler.createParticle()
             let snowflake = UIImageView(frame: particle.frame)
