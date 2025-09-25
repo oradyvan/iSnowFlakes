@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6ED637702E853FCC00087D67 /* iSnowFlakes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED6375D2E853FCC00087D67 /* iSnowFlakes.framework */; };
+		6ED637712E853FCC00087D67 /* iSnowFlakes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED6375D2E853FCC00087D67 /* iSnowFlakes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		6E70395D2E338EEC001331B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -14,29 +19,51 @@
 			remoteGlobalIDString = 6E70394E2E338EEC001331B2;
 			remoteInfo = iSnowFlakes;
 		};
-		6E7039672E338EEC001331B2 /* PBXContainerItemProxy */ = {
+		6ED6376E2E853FCC00087D67 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E7039472E338EEC001331B2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6E70394E2E338EEC001331B2;
+			remoteGlobalIDString = 6ED6375C2E853FCC00087D67;
 			remoteInfo = iSnowFlakes;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6ED637752E853FCC00087D67 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6ED637712E853FCC00087D67 /* iSnowFlakes.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6E70394F2E338EEC001331B2 /* iSnowFlakesDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSnowFlakesDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E70395C2E338EEC001331B2 /* iSnowFlakesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSnowFlakesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E7039662E338EEC001331B2 /* iSnowFlakesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSnowFlakesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ED6375D2E853FCC00087D67 /* iSnowFlakes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iSnowFlakes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		6ED22CA42E33909F002BE352 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakesTests" target */ = {
+		6ED637AE2E85404500087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakesTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 				iSnowFlakes.xctestplan,
+				SnowflakesMakerTests.swift,
 			);
 			target = 6E70395B2E338EEC001331B2 /* iSnowFlakesTests */;
+		};
+		6ED637B42E8540AB00087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakes" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SnowflakesMakerTests.swift,
+			);
+			target = 6ED6375C2E853FCC00087D67 /* iSnowFlakes */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -46,10 +73,16 @@
 			path = iSnowFlakesDemoApp;
 			sourceTree = "<group>";
 		};
-		6E70395F2E338EEC001331B2 /* iSnowFlakesTests */ = {
+		6ED6375E2E853FCC00087D67 /* iSnowFlakes */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = iSnowFlakes;
+			sourceTree = "<group>";
+		};
+		6ED637AA2E85404500087D67 /* iSnowFlakesTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				6ED22CA42E33909F002BE352 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakesTests" target */,
+				6ED637AE2E85404500087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakesTests" target */,
+				6ED637B42E8540AB00087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakes" target */,
 			);
 			path = iSnowFlakesTests;
 			sourceTree = "<group>";
@@ -61,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED637702E853FCC00087D67 /* iSnowFlakes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +105,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E7039632E338EEC001331B2 /* Frameworks */ = {
+		6ED6375A2E853FCC00087D67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,7 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				6E7039512E338EEC001331B2 /* iSnowFlakesDemoApp */,
-				6E70395F2E338EEC001331B2 /* iSnowFlakesTests */,
+				6ED6375E2E853FCC00087D67 /* iSnowFlakes */,
+				6ED637AA2E85404500087D67 /* iSnowFlakesTests */,
 				6E7039502E338EEC001331B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,12 +130,22 @@
 			children = (
 				6E70394F2E338EEC001331B2 /* iSnowFlakesDemoApp.app */,
 				6E70395C2E338EEC001331B2 /* iSnowFlakesTests.xctest */,
-				6E7039662E338EEC001331B2 /* iSnowFlakesUITests.xctest */,
+				6ED6375D2E853FCC00087D67 /* iSnowFlakes.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6ED637582E853FCC00087D67 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		6E70394E2E338EEC001331B2 /* iSnowFlakesDemoApp */ = {
@@ -110,10 +155,12 @@
 				6E70394B2E338EEC001331B2 /* Sources */,
 				6E70394C2E338EEC001331B2 /* Frameworks */,
 				6E70394D2E338EEC001331B2 /* Resources */,
+				6ED637752E853FCC00087D67 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6ED6376F2E853FCC00087D67 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				6E7039512E338EEC001331B2 /* iSnowFlakesDemoApp */,
@@ -138,9 +185,6 @@
 			dependencies = (
 				6E70395E2E338EEC001331B2 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				6E70395F2E338EEC001331B2 /* iSnowFlakesTests */,
-			);
 			name = iSnowFlakesTests;
 			packageProductDependencies = (
 			);
@@ -148,25 +192,28 @@
 			productReference = 6E70395C2E338EEC001331B2 /* iSnowFlakesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6E7039652E338EEC001331B2 /* iSnowFlakesUITests */ = {
+		6ED6375C2E853FCC00087D67 /* iSnowFlakes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E7039762E338EEC001331B2 /* Build configuration list for PBXNativeTarget "iSnowFlakesUITests" */;
+			buildConfigurationList = 6ED637722E853FCC00087D67 /* Build configuration list for PBXNativeTarget "iSnowFlakes" */;
 			buildPhases = (
-				6E7039622E338EEC001331B2 /* Sources */,
-				6E7039632E338EEC001331B2 /* Frameworks */,
-				6E7039642E338EEC001331B2 /* Resources */,
+				6ED637582E853FCC00087D67 /* Headers */,
+				6ED637592E853FCC00087D67 /* Sources */,
+				6ED6375A2E853FCC00087D67 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E7039682E338EEC001331B2 /* PBXTargetDependency */,
 			);
-			name = iSnowFlakesUITests;
+			fileSystemSynchronizedGroups = (
+				6ED6375E2E853FCC00087D67 /* iSnowFlakes */,
+				6ED637AA2E85404500087D67 /* iSnowFlakesTests */,
+			);
+			name = iSnowFlakes;
 			packageProductDependencies = (
 			);
-			productName = iSnowFlakesUITests;
-			productReference = 6E7039662E338EEC001331B2 /* iSnowFlakesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			productName = iSnowFlakes;
+			productReference = 6ED6375D2E853FCC00087D67 /* iSnowFlakes.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -185,9 +232,8 @@
 						CreatedOnToolsVersion = 26.0;
 						TestTargetID = 6E70394E2E338EEC001331B2;
 					};
-					6E7039652E338EEC001331B2 = {
-						CreatedOnToolsVersion = 26.0;
-						TestTargetID = 6E70394E2E338EEC001331B2;
+					6ED6375C2E853FCC00087D67 = {
+						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
 			};
@@ -207,7 +253,7 @@
 			targets = (
 				6E70394E2E338EEC001331B2 /* iSnowFlakesDemoApp */,
 				6E70395B2E338EEC001331B2 /* iSnowFlakesTests */,
-				6E7039652E338EEC001331B2 /* iSnowFlakesUITests */,
+				6ED6375C2E853FCC00087D67 /* iSnowFlakes */,
 			);
 		};
 /* End PBXProject section */
@@ -221,13 +267,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6E70395A2E338EEC001331B2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6E7039642E338EEC001331B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,7 +290,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E7039622E338EEC001331B2 /* Sources */ = {
+		6ED637592E853FCC00087D67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,10 +305,10 @@
 			target = 6E70394E2E338EEC001331B2 /* iSnowFlakesDemoApp */;
 			targetProxy = 6E70395D2E338EEC001331B2 /* PBXContainerItemProxy */;
 		};
-		6E7039682E338EEC001331B2 /* PBXTargetDependency */ = {
+		6ED6376F2E853FCC00087D67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E70394E2E338EEC001331B2 /* iSnowFlakesDemoApp */;
-			targetProxy = 6E7039672E338EEC001331B2 /* PBXContainerItemProxy */;
+			target = 6ED6375C2E853FCC00087D67 /* iSnowFlakes */;
+			targetProxy = 6ED6376E2E853FCC00087D67 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -416,7 +455,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.iSnowFlakes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.iSnowFlakesDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -450,7 +489,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.iSnowFlakes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.iSnowFlakesDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -467,14 +506,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XHVKX3557K;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.iSnowFlakesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -489,14 +529,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XHVKX3557K;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.iSnowFlakesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -507,43 +548,81 @@
 			};
 			name = Release;
 		};
-		6E7039772E338EEC001331B2 /* Debug */ = {
+		6ED637732E853FCC00087D67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XHVKX3557K;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.iSnowFlakesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.iSnowFlakes;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iSnowFlakes;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		6E7039782E338EEC001331B2 /* Release */ = {
+		6ED637742E853FCC00087D67 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XHVKX3557K;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.iSnowFlakesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oradyvan.iSnowFlakes;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iSnowFlakes;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -577,11 +656,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E7039762E338EEC001331B2 /* Build configuration list for PBXNativeTarget "iSnowFlakesUITests" */ = {
+		6ED637722E853FCC00087D67 /* Build configuration list for PBXNativeTarget "iSnowFlakes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E7039772E338EEC001331B2 /* Debug */,
-				6E7039782E338EEC001331B2 /* Release */,
+				6ED637732E853FCC00087D67 /* Debug */,
+				6ED637742E853FCC00087D67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

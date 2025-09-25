@@ -41,6 +41,17 @@
                ReferencedContainer = "container:iSnowFlakes.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6E70395B2E338EEC001331B2"
+               BuildableName = "iSnowFlakesTests.xctest"
+               BlueprintName = "iSnowFlakesTests"
+               ReferencedContainer = "container:iSnowFlakes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
