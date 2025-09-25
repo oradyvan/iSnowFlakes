@@ -6,7 +6,7 @@ final class MainViewController: UIViewController {
     private let kNumberOfSnowflakes: Int = 200
     private let kMinSnowflakeRatio: CGFloat = 0.05
     private let kMaxSnowflakeRatio: CGFloat = 0.1
-    private let kTimerRate: TimeInterval = 0.05
+    private let kTimerRate: TimeInterval = 0.03
 
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var rotateButton: UIButton!
@@ -18,22 +18,31 @@ final class MainViewController: UIViewController {
     private var rotationTimer: Timer?
     private var snowflakeParticle: SnowflakeParticle?
 
+    override func willMove(toParent parent: UIViewController?) {
+        if let parent  {
+            let screenScale = parent.traitCollection.displayScale
+            initializeEngines(frame: parent.view.frame, screenScale: screenScale)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         edgesForExtendedLayout = .all
+    }
 
+    func initializeEngines(frame: CGRect, screenScale: CGFloat) {
         // initialise the main engine of making the snowflakes
         self.maker = SnowflakeMaker(
             size: imgView.frame.size,
-            screenScale: UIScreen.main.scale
+            screenScale: screenScale
         )
 
         // initialise the engine controlling the life cycle of
         // the snowflakes as particles
         self.ruler = SnowflakeRuler(
             numberOfSnowflakes: kNumberOfSnowflakes,
-            size: view.frame.size
+            size: frame.size
         )
 
         // draw a sample of a snowflake
