@@ -1,6 +1,6 @@
 import UIKit
 
-final class SnowflakesViewController: UIViewController {
+public final class SnowflakesViewController: UIViewController {
 
     private let kNumberOfSnowflakes: Int = 200
     private let kMinSnowflakeRatio: CGFloat = 0.05
@@ -13,19 +13,19 @@ final class SnowflakesViewController: UIViewController {
 
     private var snowflakes: [UIImageView] = []
 
-    override func willMove(toParent parent: UIViewController?) {
+    public override func willMove(toParent parent: UIViewController?) {
         if let parent  {
             let screenScale = parent.traitCollection.displayScale
             initializeEngines(frame: parent.view.frame, screenScale: screenScale)
         }
     }
 
-    override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
+    public override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         ruler.size = size
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         edgesForExtendedLayout = .all

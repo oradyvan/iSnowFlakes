@@ -6,10 +6,7 @@ struct MainView: UIViewControllerRepresentable {
     typealias UIViewControllerType = MainViewController
 
     func makeUIViewController(context: Context) -> MainViewController {
-        MainViewController(
-            nibName: nil,
-            bundle: nil
-        )
+        MainViewController()
     }
 
     func updateUIViewController(_ uiViewController: MainViewController, context: Context) {
