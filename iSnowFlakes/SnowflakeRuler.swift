@@ -73,7 +73,11 @@ final class SnowflakeRuler {
         let fallSpeed = kFallSpeed * CGFloat(particle.phase)
         frame.origin.y += fallSpeed
 
-        let x: CGFloat = frame.origin.y / size.height * CGFloat(particle.phase) * .pi
+        // determine max of width and height so the falling looks more natural
+        // once the screen is rotated
+        let maxExtent = max(size.width, size.height)
+
+        let x: CGFloat = frame.origin.y / maxExtent * CGFloat(particle.phase) * .pi
         let shift = fallSpeed / 2 * (particle.rotationAngle > 0 ? -1 : 1)
         frame.origin.x += shift * sin(x / 2) * cos(5 * x / 6)
 
