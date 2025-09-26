@@ -58,6 +58,52 @@ struct SnowflakeRulerTests {
         }
         #expect(caughtId == id)
     }
+
+    @Test func moveParticle_shouldUpdateFrame() throws {
+        let environment = Environment()
+        let sut = environment.makeSUT()
+
+        let (id, initialParticle) = sut.createParticle()
+        let particle = try sut.moveParticle(id)
+
+        #expect(particle.frame.minY > initialParticle.frame.minY)
+        if particle.rotationAngle > 0 {
+            #expect(particle.frame.minX > initialParticle.frame.minX)
+        } else {
+            #expect(particle.frame.minX < initialParticle.frame.minX)
+        }
+    }
+
+    @Test func shouldDestroy_whenWithinBounds_shouldReturnFalse() {
+        let environment = Environment()
+        let sut = environment.makeSUT()
+        
+        let particle = SnowflakeParticle(
+            rotationAngle: 0.0,
+            frame: CGRect(x: 10.0, y: 10.0, width: 10.0, height: 10.0),
+            phase: 1
+        )
+
+        #expect(!sut.shouldDestroy(particle: particle))
+    }
+
+    @Test("shouldDestroy when outside bounds should return True", arguments: [
+        CGRect(x: -20.0, y: 10.0, width: 10.0, height: 10.0),
+        CGRect(x: 210.0, y: 10.0, width: 10.0, height: 10.0),
+        CGRect(x: 10.0, y: 200.0, width: 10.0, height: 10.0),
+    ])
+    func shouldDestroy_whenOutsideBounds_shouldReturnTrue(frame: CGRect) {
+        let environment = Environment()
+        let sut = environment.makeSUT()
+
+        let particle = SnowflakeParticle(
+            rotationAngle: 0.0,
+            frame: frame,
+            phase: 1
+        )
+
+        #expect(sut.shouldDestroy(particle: particle))
+    }
 }
 
 private struct Environment {
