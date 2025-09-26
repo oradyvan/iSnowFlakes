@@ -78,7 +78,9 @@ public final class SnowflakesViewController: UIViewController {
 
         // move existing snowflakes down one step
         snowflakes.forEach { snowflake in
-            let particle = ruler.moveParticle(snowflake.tag)
+            guard let particle = try? ruler.moveParticle(snowflake.tag) else {
+                return
+            }
 
             // update the centre of the snowflake by the updated particle frame
             snowflake.center = CGPoint(x: particle.frame.midX, y: particle.frame.midY)

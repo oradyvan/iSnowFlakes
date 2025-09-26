@@ -71,8 +71,10 @@ final class SnowflakeRuler {
         snowflakes[id] = nil
     }
 
-    func moveParticle(_ id: Int) -> SnowflakeParticle {
-        let particle = snowflakes[id]!
+    func moveParticle(_ id: Int) throws -> SnowflakeParticle {
+        guard let particle = snowflakes[id] else {
+            throw SnowflakeRulerError.invalidSnowflakeID(id)
+        }
 
         var frame = particle.frame
         let fallSpeed = kFallSpeed * CGFloat(particle.phase)
