@@ -40,6 +40,24 @@ struct SnowflakeRulerTests {
 
         #expect(hasOverlapping)
     }
+
+    @Test("When created particle was destroyed, moveParticle should throw error")
+    func moveParticle_destroyedParticle_throwsError() {
+        let environment = Environment()
+        let sut = environment.makeSUT()
+
+        let (id, _) = sut.createParticle()
+        sut.destroyParticle(id)
+
+        let error = #expect(throws: SnowflakeRulerError.self) {
+            try sut.moveParticle(id)
+        }
+        guard case .invalidSnowflakeID(let caughtId) = error else {
+            Issue.record("Expected .invalidSnowflakeID error")
+            return
+        }
+        #expect(caughtId == id)
+    }
 }
 
 private struct Environment {
