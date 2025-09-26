@@ -18,6 +18,28 @@ struct SnowflakeRulerTests {
             snowflakes.append(particle)
         }
     }
+
+    @Test("When createParticle is called many times it may create overlapping ones")
+    func createParticle_manyTimes_overlapping() {
+        let environment = Environment()
+        let sut = environment.makeSUT()
+
+        var snowflakes = [SnowflakeParticle]()
+        var hasOverlapping: Bool = false
+        for _ in 1...100 {
+            let (_, particle) = sut.createParticle()
+
+            if !hasOverlapping {
+                hasOverlapping = snowflakes.contains(
+                    where: { $0.frame.intersects(particle.frame) }
+                )
+            }
+
+            snowflakes.append(particle)
+        }
+
+        #expect(hasOverlapping)
+    }
 }
 
 private struct Environment {

@@ -42,8 +42,13 @@ final class SnowflakeRuler {
         var flakeFrame = CGRect(x: flakeX, y: -flakeSize, width: flakeSize, height: flakeSize).integral
 
         // choose X position until there are no overlaps with the existing snowflakes
-        while snowflakes.values.contains(where: { $0.frame.intersects(flakeFrame) }) {
+        // only allow overlaps if there are too many particles to be generated
+        let maxTriesBeforeOverlap: Int = numberOfSnowflakes / 10
+        var overlapChecks: Int = 0
+        while overlapChecks < maxTriesBeforeOverlap &&
+            snowflakes.values.contains(where: { $0.frame.intersects(flakeFrame) }) {
             flakeFrame.origin.x = CGFloat.random(in: minX...maxX)
+            overlapChecks += 1
         }
 
         // choosing random angle of rotation
