@@ -53,7 +53,8 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				iSnowFlakes.xctestplan,
-				SnowflakesMakerTests.swift,
+				SnowflakeMakerTests.swift,
+				SnowflakeRulerTests.swift,
 			);
 			target = 6E70395B2E338EEC001331B2 /* iSnowFlakesTests */;
 		};

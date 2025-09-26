@@ -2,8 +2,7 @@ import UIKit
 import Testing
 @testable import iSnowFlakes
 
-@Suite
-struct SnowflakesMakerTests {
+struct SnowflakeMakerTests {
 
     @Test func createSnowflake_shouldGenerateImage() {
         let sut = Environment().makeSUT()
