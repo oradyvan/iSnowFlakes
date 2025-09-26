@@ -52,18 +52,10 @@
 		6ED637AE2E85404500087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakesTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
 				iSnowFlakes.xctestplan,
 				SnowflakesMakerTests.swift,
 			);
 			target = 6E70395B2E338EEC001331B2 /* iSnowFlakesTests */;
-		};
-		6ED637DD2E8542EB00087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakes" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				SnowflakesMakerTests.swift,
-			);
-			target = 6ED6375C2E853FCC00087D67 /* iSnowFlakes */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -77,7 +69,6 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				6ED637AE2E85404500087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakesTests" target */,
-				6ED637DD2E8542EB00087D67 /* Exceptions for "iSnowFlakesTests" folder in "iSnowFlakes" target */,
 			);
 			path = iSnowFlakesTests;
 			sourceTree = "<group>";
@@ -205,7 +196,6 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				6ED637AA2E85404500087D67 /* iSnowFlakesTests */,
 				6ED637D92E8542CD00087D67 /* iSnowFlakes */,
 			);
 			name = iSnowFlakes;
@@ -230,7 +220,6 @@
 					};
 					6E70395B2E338EEC001331B2 = {
 						CreatedOnToolsVersion = 26.0;
-						TestTargetID = 6E70394E2E338EEC001331B2;
 					};
 					6ED6375C2E853FCC00087D67 = {
 						CreatedOnToolsVersion = 26.0.1;
@@ -505,7 +494,6 @@
 		6E7039742E338EEC001331B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -521,14 +509,12 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iSnowFlakes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iSnowFlakes";
 			};
 			name = Debug;
 		};
 		6E7039752E338EEC001331B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -544,7 +530,6 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iSnowFlakes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iSnowFlakes";
 			};
 			name = Release;
 		};

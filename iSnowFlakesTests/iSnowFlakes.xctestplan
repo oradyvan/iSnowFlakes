@@ -9,12 +9,7 @@
     }
   ],
   "defaultOptions" : {
-    "performanceAntipatternCheckerEnabled" : true,
-    "targetForVariableExpansion" : {
-      "containerPath" : "container:iSnowFlakes.xcodeproj",
-      "identifier" : "6E70394E2E338EEC001331B2",
-      "name" : "iSnowFlakes"
-    }
+    "performanceAntipatternCheckerEnabled" : true
   },
   "testTargets" : [
     {
@@ -23,15 +18,6 @@
         "containerPath" : "container:iSnowFlakes.xcodeproj",
         "identifier" : "6E70395B2E338EEC001331B2",
         "name" : "iSnowFlakesTests"
-      }
-    },
-    {
-      "enabled" : false,
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:iSnowFlakes.xcodeproj",
-        "identifier" : "6E7039652E338EEC001331B2",
-        "name" : "iSnowFlakesUITests"
       }
     }
   ],
