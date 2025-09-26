@@ -2,10 +2,10 @@ import UIKit
 
 public final class SnowflakesViewController: UIViewController {
 
-    private let kNumberOfSnowflakes: Int = 200
+    private let configuration: SnowflakesConfiguration
+
     private let kMinSnowflakeRatio: CGFloat = 0.05
     private let kMaxSnowflakeRatio: CGFloat = 0.1
-    private let kTimerRate: TimeInterval = 0.03
     private let kSampleSnowflakeSize: CGFloat = 150
 
     private var maker: SnowflakeMaker!
@@ -13,6 +13,16 @@ public final class SnowflakesViewController: UIViewController {
 
     private var snowflakes: [UIImageView] = []
     private var addingSnowflakes: Bool = true
+
+    public init(configuration: SnowflakesConfiguration) {
+        self.configuration = configuration
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     public func pause() {
         addingSnowflakes = false
@@ -50,12 +60,12 @@ public final class SnowflakesViewController: UIViewController {
         // initialise the engine controlling the life cycle of
         // the snowflakes as particles
         self.ruler = SnowflakeRuler(
-            numberOfSnowflakes: kNumberOfSnowflakes,
+            numberOfSnowflakes: configuration.snowflakeCount,
             size: frame.size
         )
 
         Timer.scheduledTimer(
-            timeInterval: kTimerRate,
+            timeInterval: configuration.timerUpdateInterval,
             target: self,
             selector: #selector(onTimer),
             userInfo: nil,
@@ -88,7 +98,7 @@ public final class SnowflakesViewController: UIViewController {
         snowflakes.removeAll(where: flakesToRemove.contains)
 
         // add new snowflake
-        if addingSnowflakes && snowflakes.count < kNumberOfSnowflakes {
+        if addingSnowflakes && snowflakes.count < configuration.snowflakeCount {
             // generate new particle
             let (tag, particle) = ruler.createParticle()
             let snowflake = UIImageView(frame: particle.frame)

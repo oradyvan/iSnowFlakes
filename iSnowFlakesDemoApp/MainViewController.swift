@@ -12,7 +12,9 @@ final class MainViewController: UIViewController {
         edgesForExtendedLayout = .all
 
         // embed Snowflakes View into the Main View
-        let child = SnowflakesViewController()
+        let child = SnowflakesViewController(
+            configuration: SnowflakesConfiguration()
+        )
         addChild(child)
         view.addSubview(child.view)
         NSLayoutConstraint.activate([
