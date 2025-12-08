@@ -13,6 +13,7 @@
 		6E6850352EBE7AB200A30545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E68502A2EBE7AB200A30545 /* Assets.xcassets */; };
 		6E6850362EBE7AB200A30545 /* SnowflakesMaker-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E6850312EBE7AB200A30545 /* SnowflakesMaker-Info.plist */; };
 		6E68503A2EBE7ADA00A30545 /* iSnowFlakes in Frameworks */ = {isa = PBXBuildFile; productRef = 6E6850392EBE7ADA00A30545 /* iSnowFlakes */; };
+		6EA00E3D2EE6CE3E00881E08 /* iSnowFlakes in Frameworks */ = {isa = PBXBuildFile; productRef = 6EA00E3C2EE6CE3E00881E08 /* iSnowFlakes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E68503A2EBE7ADA00A30545 /* iSnowFlakes in Frameworks */,
+				6EA00E3D2EE6CE3E00881E08 /* iSnowFlakes in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,7 @@
 			name = iSnowFlakesDemoApp;
 			packageProductDependencies = (
 				6E6850392EBE7ADA00A30545 /* iSnowFlakes */,
+				6EA00E3C2EE6CE3E00881E08 /* iSnowFlakes */,
 			);
 			productName = iSnowFlakes;
 			productReference = 6E70394F2E338EEC001331B2 /* iSnowFlakesDemoApp.app */;
@@ -131,7 +134,7 @@
 			mainGroup = 6E7039462E338EEC001331B2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				6E6850382EBE7ADA00A30545 /* XCLocalSwiftPackageReference "../iSnowFlakes" */,
+				6EA00E3B2EE6CE3E00881E08 /* XCLocalSwiftPackageReference "../../iSnowFlakes" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6E7039502E338EEC001331B2 /* Products */;
@@ -385,14 +388,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		6E6850382EBE7ADA00A30545 /* XCLocalSwiftPackageReference "../iSnowFlakes" */ = {
+		6EA00E3B2EE6CE3E00881E08 /* XCLocalSwiftPackageReference "../../iSnowFlakes" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../iSnowFlakes;
+			relativePath = ../../iSnowFlakes;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		6E6850392EBE7ADA00A30545 /* iSnowFlakes */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = iSnowFlakes;
+		};
+		6EA00E3C2EE6CE3E00881E08 /* iSnowFlakes */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = iSnowFlakes;
 		};
